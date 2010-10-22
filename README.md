@@ -63,9 +63,10 @@ Example
 	var test = new testClass();
 
 	//Add a custum event listener
-	test.addEventListener( "custom", function( event ) { 
+	test.addEventListener( "custom", function( event, data ) { 
 		console.log( this ); 
-		console.log( event.data ); 
+		console.log( event ); 
+		console.log( data ); 
 	} );
 
 	//Dispatch event with user data

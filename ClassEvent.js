@@ -38,7 +38,7 @@ ClassEvent.on.prototype = {
 		event.data = data;
 		if ( ls ) {
 			for ( var i = 0, l = ls.length; i < l; i++ ) {
-				ls[ i ].apply( self, [ event ] );
+				ls[ i ].apply( self, [ event, data ] );
 			}
 		}
 		return self;

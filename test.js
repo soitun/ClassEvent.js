@@ -28,7 +28,7 @@ test( "handle events", function() {
 	var i = 1;
 	function listen1( e ) { ok( true, "First" ); }
 	function listen2( e ) { ok( true, "Second" ); }
-	function listen3( e ) { ok( e.data, "Event data" ); }
+	function listen3( e, data ) { ok( data.name == "jack", "Event data" ); }
 	_testClass.a( "test", listen1 );
 	_testClass.d( "test" );
 	_testClass.r( "test", listen1 );
