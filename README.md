@@ -12,9 +12,9 @@ Class Methods
 ###removeEventListener( type, listener )
 
 
-###dispatchEvent( event, data )
+###dispatchEvent( event, extraParameters )
 
-Execute the event listeners with data.
+Execute the event listeners with extraParameters.
 
 ###a( type, listener )
 
@@ -24,7 +24,7 @@ Short for addEventListener
 
 Short for removeEventListener
 
-###d( event, data )
+###d( event, extraParameters )
 
 Short for dispatchEvent
 
@@ -34,10 +34,6 @@ Event attributes
 ###event.type
 
 Describes the nature of the event.
-
-###event.data
-
-Contains the data from dispatchEvent
 
 ###event.timeStamp
 

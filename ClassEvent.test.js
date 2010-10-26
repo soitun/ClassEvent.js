@@ -28,13 +28,13 @@ test( "handle events", function() {
 	var i = 1;
 	function listen1( e ) { ok( true, "First" ); }
 	function listen2( e ) { ok( true, "Second" ); }
-	function listen3( e, data ) { ok( data.name == "jack", "Event data" ); }
+	function listen3( e, data, extra ) { ok( data.name == "jack" && extra == 5, "Event data" ); }
 	_testClass.a( "test", listen1 );
 	_testClass.d( "test" );
 	_testClass.r( "test", listen1 );
 	_testClass.a( "test", listen2 );
 	_testClass.a( "test", listen3 );
-	_testClass.d( "test", { "name" : "jack" } );
+	_testClass.d( "test", [ { "name" : "jack" }, 5 ] );
 	_testClass.r( "test" );
 	_testClass.d( "test", { "name" : "jack" } );
 } );
